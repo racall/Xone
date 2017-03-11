@@ -1,0 +1,36 @@
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+  <%
+    var title = [];
+    if (page.current > 1) {
+      title.push(__('第 %d 页', page.current));
+    }
+    if (page.title) {
+      title.push(page.title);
+    }
+    if (page.category) {
+      title.push(page.category);
+    }
+    if (page.tag) {
+      title.push(page.tag);
+    }
+    if (page.archive){
+      if (page.year) {
+        title.push(__('归档：%s', page.year + (page.month ? '/' + page.month : '')));
+      } else {
+        title.push(__('归档'));
+      }
+    }
+    title.push(config.title);
+    if (config.subtitle) {
+      title.push(config.subtitle);
+    }
+  %>
+  <title><%= title.join(' | ') %></title>
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- theme.root_url %><%- theme.favicon %>">
+  <% } %>
+  <%- css('css/main') %>
+  <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>

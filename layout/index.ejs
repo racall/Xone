@@ -1,0 +1,12 @@
+<% page.posts.each(function(item){ %>
+	<% if(theme.toptitle == item.title){%>
+  	<%- partial('components/article', {item: item, index: true}) %>
+  <%}%>
+<% }); %>
+<% page.posts.each(function(item){ %>
+	<% if(theme.toptitle != item.title){%>
+		<%- partial('components/article', {item: item, index: true}) %>
+	<%}%>
+<% }); %>
+
+<%- partial('components/pagination') %>

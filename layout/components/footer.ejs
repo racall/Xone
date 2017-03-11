@@ -1,0 +1,42 @@
+<footer>
+	<p>
+		访客数:<span id="busuanzi_value_site_uv"></span>
+		访问量:<span id="busuanzi_value_site_pv"></span>
+	</p>
+	<p class="author">Copyright <i class="glyphicon glyphicon-copyright-mark"></i> <a href="http://www.domeyi.com">Racall</a> 2016</p>
+	<p class="motto">
+		<i class="glyphicon glyphicon-chevron-left"></i>
+		THE PROGRAME CHANGE THE WORLD
+		<i class="glyphicon glyphicon-italic"></i>
+		<i class="glyphicon glyphicon-chevron-right"></i>
+	</p>
+</footer>
+<div id="backtoTop" title="回到顶部" data-action="gototop">
+	<canvas id="backtoTopCanvas" width="48" height="48"></canvas>
+	<div class="per" data-percent="100"></div>
+</div>
+<%- js('//cdn.bootcss.com/pace/1.0.2/pace.min.js') %>
+<%- js('js/jquery.min.js') %>
+<%- js('js/jquery.marquee.min.js') %>
+<%- js('js/tipso.min.js') %>
+<%- js('js/right.js') %>
+<%- js('js/time.js') %>
+<%- js('js/script.js') %>
+<%- js('js/gotop.js') %>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+<script type="text/javascript">
+	var duoshuoQuery = {short_name:"<%- theme.duoshuo_name %>"};
+	(function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+
+	    ds.src = 'https://pic.52xyi.cn/duoshuo.js';
+	    /*上面是我自己的 embed.js 链接，请改为你自己的地址*/
+
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script>
+

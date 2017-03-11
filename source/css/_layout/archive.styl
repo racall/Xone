@@ -1,0 +1,94 @@
+article 
+  .archive-main 
+    position relative
+    z-index 1010
+    margin-left 55px
+    width 85%
+  .archive 
+    &::after 
+      content " "
+      position absolute
+      top 20px
+      left 0
+      margin-left -2px
+      width 4px
+      height 100%
+      background #f5f5f5
+      z-index -1
+    .archive-move-on 
+      position absolute
+      top 11px
+      left 0
+      margin-left -6px
+      width 10px
+      height 10px
+      opacity 0.5
+      background #555
+      border 1px solid #fff
+      border-radius 50%
+.page-count 
+  position relative
+  top 5px
+  left 15px
+  font-size 1.6rem
+.pages-year 
+  position relative
+  margin 10px 0
+  &::before 
+    content " "
+    position absolute
+    left 0
+    top 50%
+    margin-left -4px
+    margin-top -4px
+    width 8px
+    height 8px
+    background #bbb
+    border-radius 50%
+  h2 
+    margin-left 20px
+.pages 
+  margin 30px 0
+  .pages-header 
+    display block
+    position relative
+    transition-duration 0.2s
+    transition-timing-function ease-in-out
+    transition-delay 0s
+    transition-property border
+    border-bottom 1px dashed #ccc
+    &:hover 
+      border-bottom-color #666
+      &::before 
+        background #222
+    &::before 
+      content " "
+      position absolute
+      left 0
+      top 8px
+      width 6px
+      height 6px
+      margin-left -4px
+      background #bbb
+      border-radius 50%
+      border 1px solid #fff
+      transition-duration 0.2s
+      transition-timing-function ease-in-out
+      transition-delay 0s
+      transition-property background
+    h2 
+      margin 0
+      margin-left 60px
+      font-size 16px
+      font-weight normal
+      line-height inherit
+  .pages-time 
+    position absolute
+    font-size 12px
+    left 15px
+    top 4px
+    time 
+      position relative
+      font-size 12px
+      left 5px
+      top 0

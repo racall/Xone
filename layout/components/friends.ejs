@@ -1,0 +1,10 @@
+<%if(theme.friends && theme.friends.length != 0){%>
+	<section class="friends">
+		<div class="friends-box">
+            <% for (var i in theme.friends){ %>
+              <a target="_blank" class="main-nav-link switch-friends-link" href="<%- url_for(theme.friends[i]) %>"><%= i %></a>
+            <% } %>
+		</div>
+		<div class="pop-friends" title="友链"></div>
+	</section>
+<%}%>

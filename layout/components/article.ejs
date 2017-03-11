@@ -1,0 +1,100 @@
+	<!-- 文章部分 -->
+	<article class="animate-init">
+<% if (item.link){ %>
+    <% if (item.title){ %>
+		<h3 class="article-title">
+			<a href="<%- item.link %>"><%= item.title %></a>
+		</h3>
+    <% } else { %>
+    	<h3 class="article-title">
+			<a href="<%- item.link %>"><%= item.title %></a>
+		</h3>
+    <% } %>
+<% } else { %>
+    <% if (index){ %>
+		<h3 class="article-title">
+			<a href="<%- config.root %><%- item.path %>"><%= item.title %></a>
+		</h3>
+    <% } else { %>
+    	<h3 class="article-title"><%= item.title %></h3>
+    <% } %>
+<% } %>
+		<div class="article-time">
+			<a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a>
+		</div>
+		<div class="article-content">
+			<div class="entry">
+			      <% if (item.excerpt && index){ %>
+			        <%- item.excerpt %>
+			      <% } else { %>
+			        <%- item.content %>
+			      <% } %>
+	      	</div>
+		</div>
+
+		<div class="article-footer clearfix">
+		<% if (index){ %>
+			<div class="article-meta pull-left">
+		    <% if (item.categories && item.categories.length){ %>
+		      <%
+		        var cats = [];
+		        item.categories.forEach(function(cat){
+		            cats.push('<a href="' + config.root + cat.path + '">' + cat.name + '</a>');
+		        });
+		      %>
+			    <span class="post-categories">
+			      <i class="glyphicon glyphicon-bookmark"></i>
+			        <%- cats.join(', ') %>
+			    </span>  
+			<% } %>
+
+		    <% if (item.tags && item.tags.length){ %>
+			    <%
+			        var tags = [];
+			        item.tags.forEach(function(tag){
+			            tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+			        });
+			    %>
+			    <span class="post-tags">
+			      <i class="glyphicon glyphicon-tag"></i>
+			        <%- tags.join('') %>
+			    </span>
+			<% } %>
+	    	</div>
+	    	<% if (index && (theme.duoshuo || theme.disqus)){ %>
+			 <div class="article-meta pull-right">
+				  <span>
+				    <span>
+				      <a href="<%- config.root %><%- item.path %>#comment">
+					      <i class="glyphicon glyphicon-comment"></i>
+					      <%- partial('dsnum') %>
+				      </a>
+				    </span>
+				  </span>
+			</div>
+			<% } %>
+			<% } else { %>
+			<% if (page.prev || page.next){ %>
+				<div class="article-meta pull-left">
+				<% if (page.prev){ %>
+				    <span class="post-categories">
+				      <i class="glyphicon glyphicon-chevron-left"></i>
+				        <a href="<%- url_for(page.prev.path) %>"><%= page.prev.title %></a>
+				    </span>
+				<% } %>
+		    	</div>
+				 <div class="article-meta pull-right">
+				 <% if (page.next){ %>
+					  <span>
+					  	<a href="<%- url_for(page.next.path) %>"><%= page.next.title %></a>
+					    <i class="glyphicon glyphicon-chevron-right"></i>
+					  </span>
+				<% } %>
+				</div>
+			<% } %>
+		<% } %>
+		</div>
+	</article>
+<% if (!index){ %>
+  <%- partial('comment') %>
+<% } %>

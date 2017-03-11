@@ -1,0 +1,36 @@
+<header>
+	<!-- 站点信息 -->
+	<div class="site-info">
+		<a href="<%- config.root %>" class="avatar"><img src="<%- theme.root_url %><%=theme.avatar%>" class="animated zoomIn"></a>
+		<div class="info">
+			<h1 class="site-title"><a href="<%- config.root %>"><%=theme.author%></a></h1>
+			<span class="describe"><% if (config.subtitle){ %><%= config.subtitle %><% } %></span>
+		</div>
+		<ul>
+	        <% for (var i in theme.subnav){ %>
+	            <li class="link"><a href="<%- url_for(theme.subnav[i]) %>" class="iconfont icon-<%= i %>" target="_blank"></a></li>
+	        <%}%>
+			
+		</ul>
+	</div>
+	<!-- 欢迎语 -->
+	<div class="notice">
+	<% if (is_home()){ %>
+		<div class="marquee-content-items">
+			<span><% if (theme.notice){ %><%= theme.notice %><% } %></span>
+			<% if (theme.nowtime){ %>
+				<span class="nowtime"></span>
+			<% } %>
+		</div>
+	<% } %>
+	</div>
+
+	<!-- 导航栏 -->
+	<nav class="navbar animate-init">
+		<ul>
+			<% for (var i in theme.menu){ %>
+	        <li class="nav-item"><a href="<%- url_for(theme.menu[i]) %>"><%= __(i) %></a></li>
+	      	<% } %>
+		</ul>
+	</nav>
+</header>

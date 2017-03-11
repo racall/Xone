@@ -1,0 +1,63 @@
+# >>> Basic Setup | 基础设置 <<<
+
+# Header | 主菜单
+## About Page: `hexo new page about`
+## Tags Cloud Page: `hexo new page tags`
+menu:
+  主页: /
+  归档: /archives/
+  关于: /about/
+
+# 填写头像地址
+avatar: /img/avatar.jpg
+
+# 站点小图标地址
+favicon: /img/site.png
+
+# 是否开启音乐插件
+music: false
+# 音乐是否自动播放 colse 不自动播放
+musicAuto: open
+# 歌曲播放顺序 colse 顺序播放  open 随机播放
+musicRandom: open
+# 网易云个人主页ID 例如:376083126
+userID: 376083126
+# 播放器名称
+musicName: 小忆博客播放器
+# 歌词显示 colse 歌词不显示  open显示歌词
+musicLrc: open
+# 欢迎语
+welcome: open
+musicTips: 很高兴您来了
+# 站点公告
+notice: 个人公告
+# 显示当前时间
+nowtime: false
+
+# If your site' url is 'http://yoursite.com/blog', set root_url as '/blog/'
+# 网站若存放在子目录，请按上面格式填写
+# https://hexo.io/docs/configuration.html#URL
+root_url: 
+
+# Social info. Bar | 社交信息展示
+subnav:
+  email: "mailto:xy@domeyi.com"
+  github: "https://github.com/racall"
+  twitter: "https://twitter.com/xexiaoyi"
+  qq: "http://sighttp.qq.com/authd?IDKEY="
+
+#顶置文章标题
+toptitle: 
+# 多说评论，开启true，关闭false。
+# duoshuo_name是指创建站点时，填写多说域名的第一部分
+duoshuo: true
+duoshuo_name: 
+
+# 是否开启边栏多标签切换
+tagcloud: true
+
+# 友情链接
+friends:
+  GitHub: https://github.com/racall
+  小忆博客: https://blog.domeyi.com
+

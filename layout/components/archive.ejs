@@ -1,0 +1,36 @@
+<%
+var title = '';
+if (page.category) title = page.category;
+if (page.tag) title = page.tag;
+if (page.archive){
+  if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+  else title = __('归档');
+}
+%>
+<article>
+<div class="archive-main">
+	<div class="archive">
+		<%if (page.archive){%>
+			<span class="archive-move-on"></span>
+			<span class="page-count">目前共计<%= site.posts.length %>篇日志</span>
+		<%}%>
+		<% var last; %>
+		<% page.posts.each(function(item){ %>
+			<% var year = item.date.year(); %>
+			<% if (last != year){ %>
+				<% last = year; %>
+				<div class="pages-year animate-init">
+					<h2><%= year %></h2>
+				</div>
+			<% } %>
+			<div class="pages">
+				<span class="pages-header animate-init">
+					<h2><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></h2>
+					<div class="pages-time"><time><%= date(item.date, 'MM-DD') %></time></div>
+				</span>
+			</div>
+		<% }); %>
+	</div>			
+</div>
+<%- partial('pagination') %>
+</article>

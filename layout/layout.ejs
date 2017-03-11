@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<%- partial('components/head') %>
+<body ontouchstart="">
+<%- partial('components/header') %>
+<div class="container">
+	<main>
+		<%- body %>
+	</main>
+<section class="BR">
+<!-- 右下角音乐 -->
+<% if (!is_post() && !is_home() && !is_archive()){ %>
+	<%- partial('components/music') %>
+<% } %>
+	<!-- 右下角标签云 -->
+<%- partial('components/tags') %>
+	<!-- 右下角友链 -->
+<%- partial('components/friends') %>
+</section>
+</div>
+<%- partial('components/footer') %>
+</body>
+</html>

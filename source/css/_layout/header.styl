@@ -1,0 +1,92 @@
+header 
+  width 100%
+  margin-bottom 2rem
+  .site-info 
+    width 300px
+    height 140px
+    margin 0 auto
+    position relative
+    .avatar 
+      display block
+      border 5px solid rgba(51,122,183,.4)
+      border-radius 50%
+      width 128px
+      height 128px
+      position relative
+      overflow hidden
+      text-align center
+      z-index 1
+      float left
+      img 
+        width 100%
+        height 100%
+        border-radius 50%
+      &:hover 
+        background #fff
+        border 5px solid #88acdb
+        box-shadow 0 0 1.5em #88acdb
+        animation profilepic 0.15s linear infinite alternate
+    ul 
+      position relative
+      top 3rem
+      li 
+        display inline-block
+        color #212121
+        margin 0 0.4rem
+        margin-bottom 0.5rem
+        &:hover 
+          animation tada 0.5s linear infinite alternate
+      a 
+        font-size 24px
+        line-height 32px
+        display block
+
+  .info 
+    .site-title 
+      display block
+      margin-bottom 5px
+    .describe 
+      font-size 1.6rem
+  .notice 
+    width 30rem
+    font-size 1.4rem
+    color #666
+    margin 1rem auto
+    overflow hidden
+  .navbar 
+    max-width 75%
+    ul 
+      line-height 4rem
+      text-align center
+      li 
+        display inline-block
+        margin 0 0.5rem
+        font-size 1.6rem
+@keyframes profilepic
+  0%
+    right: 4px
+    top: 1px
+  100%
+    right: 0
+    top: -1px
+
+header 
+  .info 
+    position relative
+    top 2.5rem
+    text-align center
+    z-index 0
+/*导航栏*/
+.navbar::before, .navbar::after 
+  position relative
+  content ' '
+  display block
+  margin 0 auto
+  opacity 0.3
+.navbar 
+  position relative
+  margin 0 auto
+  &::before 
+    border-top 1px solid #ccc
+  &::after 
+    border-bottom 1px solid #ccc
