@@ -8,11 +8,11 @@ menu:
   归档: /archives/
   关于: /about/
 
-# 填写头像地址
-avatar: /img/avatar.jpg
+# 填写头像地址,可以放在source/img下
+avatar: /img/xxx.jpg
 
-# 站点小图标地址
-favicon: /img/site.png
+# 站点小图标地址,可以放在source/img下
+favicon: /img/xxx.png
 
 # 是否开启音乐插件
 music: false
