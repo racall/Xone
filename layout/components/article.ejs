@@ -23,6 +23,9 @@
 			<a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a>
 		</div>
 		<div class="article-content">
+			<% if (theme.fancybox){ %>
+				<input type="hidden" class="isFancy" />
+			<% } %>
 			<div class="entry">
 			      <% if (item.excerpt && index){ %>
 			        <%- item.excerpt %>

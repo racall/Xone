@@ -31,6 +31,9 @@
   <% if (theme.favicon){ %>
     <link rel="icon" href="<%- theme.root_url %><%- theme.favicon %>">
   <% } %>
+  <% if (theme.fancybox){ %>
+    <link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css">
+  <% } %>
   <%- css('css/main') %>
   <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
