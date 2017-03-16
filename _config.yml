@@ -46,6 +46,8 @@ subnav:
   twitter: "https://twitter.com/xexiaoyi"
   qq: "http://sighttp.qq.com/authd?IDKEY="
 
+#fancybox插件,如需让图片不加载fancybox,请在图片中添加属性alt="ad"
+fancybox: true
 #顶置文章标题
 toptitle: 
 # 多说评论，开启true，关闭false。
